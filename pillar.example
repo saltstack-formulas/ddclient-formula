@@ -1,0 +1,11 @@
+ddclient:
+  globals:
+    daemon: 5m
+  hosts:
+    # the fqdn of this example is "myhost.namecheap-domain.com"
+    "myhost":
+      protocol: namecheap
+      use: "web, web=checkip.amazonaws.com"
+      server: "dynamicdns.park-your-domain.com"
+      login: "namecheap-domain.com"
+      password: "password-here"

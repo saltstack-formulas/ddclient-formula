@@ -1,9 +1,8 @@
-ddclient
-========
+salt-ddclient-formula
+=====================
 
-Install ddclient
+Saltstack formula to update dynamic DNS entries using ddclient.
 
-.. note::
+Since it doesn't make sense to run ``ddclient`` without at least one DNS entry to update, you'll want to have some data in your pillar.
 
-    See the full `Salt Formulas installation and usage instructions
-    <http://docs.saltstack.com/topics/conventions/formulas.html>`_.
+The ``pillar.example`` is based on the information that I use for Namecheap's dynamic DNS. For other DNS services, look at the output of ``ddclient -help`` to see example configurations, and experiment!

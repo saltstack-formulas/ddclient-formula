@@ -1,0 +1,14 @@
+{% set ddclient = salt['grains.filter_by']({
+    'Debian': {
+        'package': 'ddclient',
+        'service': 'ddclient',
+        'config': '/etc/ddclient.conf',
+        'config_src': 'salt://ddclient/files/ddclient.conf',
+    },
+    'RedHat': {
+        'package': 'ddclient',
+        'service': 'ddclient',
+        'config': '/etc/ddclient.conf',
+        'config_src': 'salt://ddclient/files/ddclient.conf',
+    },
+}, merge=salt['pillar.get']('ddclient:lookup')) %}
