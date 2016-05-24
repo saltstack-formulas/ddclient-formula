@@ -3,8 +3,7 @@
 ddclient:
   pkg.installed:
     - name: {{ ddclient.package }}
-  service:
-    - running
+  service.running:
     - enable: True
     - watch:
       - file: ddclient_config
